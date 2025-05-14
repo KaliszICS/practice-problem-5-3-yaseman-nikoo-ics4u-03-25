@@ -2,12 +2,14 @@ class ChequingAccount extends BankAccount {
 
 	protected int pinNumber;
 	
-	public ChequingAccount(double money, int pinNumber) {
+	public ChequingAccount(double accountBalance, int accountNumber, double money, int pinNumber) {
+		super(accountBalance, accountNumber);
 		this.accountBalance = money;
 		this.pinNumber = pinNumber;
 	}
 	
-	public ChequingAccount(int pinNumber) { //default balance
+	public ChequingAccount(double accountBalance, int accountNumber, int pinNumber) { //default balance
+		super(accountBalance, accountNumber);
 		this.accountBalance = 0;
 		this.pinNumber = pinNumber;
 	}
